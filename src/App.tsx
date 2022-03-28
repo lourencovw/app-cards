@@ -1,16 +1,28 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import { useNavigate } from 'react-router-dom';
 import './App.css';
-import Card from './components/Card'
+
+export interface IData {
+  englishName: string;
+  _id: string;
+  clowCard: string;
+  meaning: string;
+}
 
 function App() {
-  const [count, setCount] = useState(5);
+  const navigate = useNavigate()
 
+  function storeName(event: any) {
+    localStorage.setItem('name', event.target[0].value);
+    navigate('/cards')
+    event.preventDefault()
+  }
 
   return (
-    <div className="App">
-      <Card />
-    </div>
+    <form className="App" onSubmit={storeName}>
+      <label htmlFor="">Name:</label>
+      <input type="text" />
+      <button type='submit'>ADD NAME</button>
+    </form>
   );
 }
 
