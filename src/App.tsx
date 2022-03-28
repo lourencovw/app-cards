@@ -1,13 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import './App.css';
 
-export interface IData {
-  englishName: string;
-  _id: string;
-  clowCard: string;
-  meaning: string;
-}
-
 function App() {
   const navigate = useNavigate()
 
