@@ -14,7 +14,7 @@ function App() {
     <form className="App" onSubmit={storeName}>
       <label htmlFor="">Name:</label>
       <input type="text" />
-      <button type='submit'>ADD NAME</button>
+      <button type='submit'>SEE CARDS</button>
     </form>
   );
 }
