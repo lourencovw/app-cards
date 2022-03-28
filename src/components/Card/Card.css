@@ -1,6 +1,21 @@
-.Card {
-    width: 100px;
-    height: 100px;
+.card {
+    width: 150px;
+    height: 550px;
+    position: relative;
     border: 1px solid black;
     border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.card-image {
+    width: 80%;
+    padding: 10px 0px;
+}
+
+.value {
+    position: absolute;
+    bottom: 0;
 }
